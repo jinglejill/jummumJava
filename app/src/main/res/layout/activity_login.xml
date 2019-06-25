@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.JummumCo.Jummum.Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/jummumlaunchbg"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay"
+            android:visibility="gone">
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/text_view_size_big">
+
+            <ImageView
+                android:id="@+id/logo_crop"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/jummumlogocrop2" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:id="@+id/main_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="250dp"
+                                android:layout_height="87dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/jummumtypewhite" />
+
+                            <TextView
+                                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/login"
+                                android:textSize="@dimen/icon_tab_size"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding"
+                                android:orientation="vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/txt_username"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/selector_edit_text_username"
+                                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                        android:textColor="@color/black"
+                                        android:hint="@string/username_lb"
+                                        android:maxLines="1"
+                                        android:paddingLeft="38dp"
+                                        android:text=""
+                                        android:textSize="@dimen/text_view_size_big" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/padding"
+                                        android:src="@drawable/ic_account_circle_white_24dp"
+                                        android:tint="@color/colorPrimaryDark" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/txt_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="-2dp"
+                                        android:background="@drawable/selector_edit_text_password"
+                                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                        android:textColor="@color/black"
+                                        android:hint="@string/password_lb"
+                                        android:inputType="textPassword"
+                                        android:maxLines="1"
+                                        android:paddingLeft="38dp"
+                                        android:text=""
+                                        android:textSize="@dimen/text_view_size_big" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/padding"
+                                        android:src="@drawable/ic_vpn_key_white"
+                                        android:tint="@color/colorPrimaryDark" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <android.support.v7.widget.AppCompatCheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        app:buttonTint="@color/ef_white" />
+
+                                    <TextView
+                                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="@string/remember"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <Button
+
+                                    android:id="@+id/btnLogin"
+                                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/selector_button_login"
+                                    android:text="Log In"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:id="@+id/layout_register"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:clickable="true">
+
+                                    <TextView
+                                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="@string/register"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/layout_forget_password"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:clickable="true"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="|" />
+
+
+                                    <TextView
+                                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/forgetPassword"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="120dp"
+                                    android:layout_height="1dp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/white"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/icon_tab_size"
+                                    android:textColor="@color/ef_white"
+                                    android:text=" OR " />
+
+
+                                <ImageView
+                                    android:layout_width="120dp"
+                                    android:layout_height="1dp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/white" />
+
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.facebook.login.widget.LoginButton
+                                    android:id="@+id/login_button_fb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="30dp" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/btnRegister"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:paddingBottom="16dp"-->
+                    <!--android:text="Sing Up for CRRU"/>-->
+
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

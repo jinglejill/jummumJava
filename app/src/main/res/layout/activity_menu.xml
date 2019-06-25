@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.JummumCo.Jummum.Activity.MenuActivity">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_home"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        android:clickable="true">
+
+                        <com.JummumCo.Jummum.CustomView.TextAwesome
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/fa_home"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/icon_tab_size_big"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/select_menu"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/btn_cart"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+
+                        <com.JummumCo.Jummum.CustomView.TextAwesome
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/fa_shopping_cart"
+                            android:textAlignment="center"
+                            android:textColor="@color/ef_white"
+                            android:textSize="@dimen/icon_tab_size_big"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            app:tabBackground="@drawable/selector_tab_menu"
+            app:tabIndicatorColor="@android:color/black"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorRed"
+            app:tabTextAppearance="@style/TabLayoutStyle"
+            app:tabTextColor="@color/dark_gray" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/layout_bottom"></android.support.v4.view.ViewPager>
+
+
+            <LinearLayout
+                android:id="@+id/layout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_size_bottom"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/cart"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/pass_btn_login"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_total"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/padding_min"
+                            android:background="@drawable/shape_circle">
+
+                            <TextView
+                                android:id="@+id/tv_total"
+                                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="0"
+                                android:textColor="@color/ef_white"
+                                android:textSize="@dimen/text_view_size_big_long" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+
+                            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/cart"
+                            android:textColor="@color/ef_white"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toLeftOf="@id/txt_total"
+                            android:text="฿"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_view_size_big_long" />
+
+                        <TextView
+                            android:id="@+id/txt_total"
+                            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/padding_min"
+                            android:layout_marginRight="@dimen/padding"
+                            android:text="0"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_view_size_big_long"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_lucky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/layout_bottom"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:background="@drawable/messagebubble"
+                android:alpha="1">
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:textColor="@color/dark_green"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginTop="@dimen/padding"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:text="ลุ้นรับรางวัลพิเศษ" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:textColor="@color/dark_green"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/layout_bottom"
+                        android:layout_toLeftOf="@id/tv_3"
+                        android:text="เมื่อทานครบทุกๆ " />
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:textColor="@color/dark_green"
+                        android:textStyle="bold"
+                        android:layout_marginRight="@dimen/padding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 บาท" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

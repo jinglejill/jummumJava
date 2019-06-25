@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_bar_height"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_back"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="&lt;"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/back_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/hot_deal"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view_type"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_big"
+                android:text="xxxx"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_big"
+                android:text="xxxx"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:textColor="@color/dark_gray"/>
+
+
+            <TextView
+                android:id="@+id/btn_buy_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="สั่งเลย"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/padding_big"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_black_border"
+                android:layout_marginTop="28dp"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding"
+                android:layout_marginBottom="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/law"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <com.JummumCo.Jummum.CustomView.TextAwesome
+                    android:id="@+id/more"
+                    android:textSize="@dimen/icon_tab_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/fa_sort_desc"
+                    android:textColor="@color/bg_opacity"
+                    android:layout_marginRight="@dimen/padding"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:padding="@dimen/padding"
+                android:background="@color/gray_black_border"></View>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

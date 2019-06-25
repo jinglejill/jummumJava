@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="@dimen/padding"
+                        android:layout_marginRight="@dimen/padding"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_width="@dimen/loading_size"
+                            android:layout_height="@dimen/loading_size"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding"
+                        android:layout_marginRight="@dimen/padding" />
+
+                    <TextView
+                        android:id="@+id/txt_title_header"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/padding"
+                        android:text="&gt;"
+                        android:textAlignment="center"
+                        android:textColor="@color/ef_white"
+                        android:textSize="@dimen/back_size"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/selector_layout_frame"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/history" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/history"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@color/gray_black" />
+
+            <LinearLayout
+                android:id="@+id/layout_creditcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/creditcard" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/creditcard"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@color/gray_black" />
+
+            <LinearLayout
+                android:id="@+id/layout_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/termsofservice" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/termofservice"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@color/gray_black" />
+
+            <LinearLayout
+                android:id="@+id/layout_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/privacypolicy" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/privacy"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_space"
+            android:background="@drawable/selector_layout_frame"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_recommendshop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/recommendshop" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/recommendshop"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@color/gray_black" />
+
+            <LinearLayout
+                android:id="@+id/layout_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/comment" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/comment"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@color/gray_black" />
+
+            <LinearLayout
+                android:id="@+id/layout_contactus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/contactus" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/contactus"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@color/gray_black" />
+
+            <LinearLayout
+                android:id="@+id/layout_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/logout" />
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:text="@string/logout"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_big"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <TextView
+        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/padding"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="@dimen/padding"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:text="รับสิทธิ์" />
+
+
+    <TextView
+        android:id="@+id/menu_bottom_sheet_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/padding"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="@dimen/padding"
+        android:text="@string/cancle" />
+
+</LinearLayout>

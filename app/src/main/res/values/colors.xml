@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_holo_light">@android:color/white</color>
+
+    <color name="colorPrimary">#ff3c4b</color>
+    <color name="colorPrimaryDark">#ff3c4b</color>
+    <color name="colorAccent">#ff3c4b</color>
+    <color name="colorBg">#FFFFFF</color>
+    <color name="bgColorMain">#ff3c4b</color>
+    <color name="ide_btn_login">#64DCC8</color>
+    <color name="pass_btn_login">#64DCC8</color>
+    <color name="bg_opacity">#4D000000</color>
+    <color name="mint">#64DCC8</color>
+    <color name="colorRed">#ff3c4b</color>
+    <color name="black">#000000</color>
+    <color name="gray_black">#d6d2d2</color>
+    <color name="bg_gray">#F0F0F5</color>
+    <color name="gray_black_border">#e0e0e0</color>
+    <color name="separator_line">#e0e0e0</color>
+    <color name="pink">#f6a6ab</color>
+    <color name="dark_green">#005a50</color>
+    <color name="dark_gray">#464646</color>
+    <color name="system1_20">#ffd7da</color>
+    <color name="light_gray">#C7C7CD</color>
+    <color name="colorPrimaryDrop">#FF4F5D</color>
+</resources>

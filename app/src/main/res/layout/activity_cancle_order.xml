@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_bar_height"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_back"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="&lt;"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/back_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/cancelOrder"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding"
+                    android:text="กรุณากรอกรายละเอียดด้านล่างนี้"
+                    android:textColor="@color/bg_opacity"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding"
+                        android:layout_marginRight="@dimen/padding"
+                        android:layout_marginTop="@dimen/padding"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding"
+                        android:text="เหตุผลในการขอคืนเงิน"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginBottom="@dimen/padding">
+
+                    <EditText
+                        android:id="@+id/txt_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:descendantFocusability="blocksDescendants"
+                        android:fontFamily="@font/prompt_regular"
+                        android:hint="กรุณาเลือกเหตุผลในการขอคืนเงิน"
+                        android:inputType="text"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_select_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="จำนวนเงิน"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginBottom="@dimen/padding"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:fontFamily="@font/prompt_regular"
+                        android:hint="THB"
+                        android:inputType="phone"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_price_range"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="จำนวนเงิน THB 0.01 to "
+                        android:textColor="@color/bg_opacity"
+                        android:textSize="13sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding"
+                        android:layout_marginRight="@dimen/padding"
+                        android:layout_marginTop="@dimen/padding"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding"
+                        android:text="รายละเอียดเหตุผลในการขอคืนเงิน"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginBottom="@dimen/padding">
+
+                    <EditText
+                        android:id="@+id/txt_note_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|left"
+                        android:hint="กรุณาใส่รายละเอียดเหตุผลในการขอคืนเงิน"
+                        android:lines="2"
+                        android:maxLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_view_size_larng"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:fontFamily = "@font/prompt_regular"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding"
+                        android:layout_marginLeft="@dimen/padding"
+                        android:layout_marginRight="@dimen/padding"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding"
+                        android:text="เบอร์โทร"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_marginRight="@dimen/padding"
+                    >
+
+                    <EditText
+                        android:id="@+id/txt_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:fontFamily="@font/prompt_regular"
+                        android:hint="xxx-xxx-xxxx"
+                        android:inputType="phone"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_marginRight="@dimen/padding"
+                    android:layout_marginBottom="@dimen/padding"
+                    android:text="กรุณาใส่เบอร์โทรติดต่อ เพื่อเจ้าหน้าที่จะโทรสอบถามข้อมุลเพิ่มเติมสำหรับการโอนเงินคืนท่าน"
+                    android:textColor="@color/bg_opacity"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_yes"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding"
+                    android:background="@drawable/selector_button_login"
+                    android:text="Submit"
+                    android:textSize="@dimen/text_view_size_larng"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_no"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding"
+                    android:background="@drawable/selector_button_corlor_primary"
+                    android:text="Cancel"
+                    android:textSize="@dimen/text_view_size_larng"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

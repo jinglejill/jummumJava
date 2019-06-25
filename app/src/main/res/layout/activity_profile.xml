@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/ef_white">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_bar_height"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_back"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="&lt;"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/back_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/profile"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/padding">
+
+                    <TextView
+                        android:id="@+id/txt_email_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/email"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/email"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/fullname"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                    <TextView
+                        android:id="@+id/tv_fullname"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/email"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/lastName"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                    <TextView
+                        android:id="@+id/tv_lastname"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/email"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/birthDate"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                    <TextView
+                        android:id="@+id/tv_birth_date"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/email"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/tel"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                    <TextView
+                        android:id="@+id/tv_tel"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/email"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_view_size_big" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

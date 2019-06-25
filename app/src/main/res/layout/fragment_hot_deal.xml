@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.JummumCo.Jummum.Activity.MenuActivity">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/hot_deal"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <EditText
+            android:id="@+id/et_search"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="@dimen/padding"
+            android:background="@drawable/selector_edit_text_main"
+            android:hint="@string/searchHotdel"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black" />
+
+        <View
+            android:background="?android:attr/listDivider"
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"></View>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"></android.support.v7.widget.RecyclerView>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

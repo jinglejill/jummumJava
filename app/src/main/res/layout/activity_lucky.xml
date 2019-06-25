@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity.LuckyActivity">
+
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scaleType="fitXY"
+         />
+
+    <RelativeLayout
+        android:id="@+id/layout_lucky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding">
+
+            <com.JummumCo.Jummum.CustomView.TextAwesome
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fa_angle_left"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/icon_tab_size"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_view"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_size_big"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/image_view"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:src="@drawable/jummum_gift_box_pop" />
+
+        <TextView
+            android:id="@+id/tc_lucky_count"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/padding"
+            android:background="@drawable/shape_label"
+            android:backgroundTint="@color/pink"
+            android:shadowColor="@color/gray_black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="xxxxxx"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_order_now"
+        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tv_text_lucky"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/padding"
+        android:background="@drawable/shape_circle_green"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="@dimen/padding"
+        android:shadowColor="@color/gray_black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="สั่งเลย"
+        android:textColor="@color/dark_green"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_text_lucky"
+        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="180dp"
+        android:shadowColor="@color/colorBg"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="6"
+        android:text="xxxx"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

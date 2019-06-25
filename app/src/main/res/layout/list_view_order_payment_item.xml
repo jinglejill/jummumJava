@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_min">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <TextView
+            android:id="@+id/txt_num"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.5"
+            android:text="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_view_size_larng"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_name_take"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_min"
+                    android:text="ใส่ห่อ"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_view_size_larng" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="11111111111111"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_view_size_larng" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_add"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_name_note_add_disp"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_min"
+                    android:text="เพิ่ม"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_view_small" />
+                <TextView
+                    android:id="@+id/txt_name_note_add"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_view_small"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_remove"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_name_note_remove_disp"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_min"
+                    android:text="ไม่ใส่"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_view_small" />
+                <TextView
+                    android:id="@+id/txt_name_note_remove"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_view_small"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/bath"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_min"
+                android:layout_marginRight="@dimen/padding_min"
+                android:layout_toLeftOf="@id/txt_price"
+                android:text="฿"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_view_size_larng" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/padding_min"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_view_size_larng" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

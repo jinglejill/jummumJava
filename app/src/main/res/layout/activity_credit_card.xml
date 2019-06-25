@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_bar_height"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_back"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="&lt;"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/back_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/creditcard"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ListView
+
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:background="@color/background_holo_light"></ListView>
+
+        <LinearLayout
+
+            android:id="@+id/layout_tranform_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="22dp"
+            android:background="@color/background_holo_light">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="โอนเงิน"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:textColor="@color/dark_gray"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/text_view_size_larng"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding">
+
+                    <TextView
+                        android:id="@+id/icon_check"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_min"
+                        android:layout_alignParentRight="true"
+                        android:text="✔"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorPrimary"
+                        android:visibility="gone"
+                        android:textSize="@dimen/text_view_size_larng"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_not_credit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_centerVertical="true"
+                android:text="คุณไม่ได้บันทึกบัตรเครดิต/เดบิตไว้"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_view_size_big"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

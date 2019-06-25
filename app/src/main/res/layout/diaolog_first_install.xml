@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_dialog_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/padding_big"
+        >
+
+        <TextView
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="ยินดีต้อนรับ"
+            android:textColor="@color/dark_gray"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_detail"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding"
+            android:gravity="center"
+            android:text="คุณสามารถ log in ผ่าน facebook หรือกดลงทะเบียนเพื่อสมัครใช้งานค่ะ"
+            android:textColor="@color/dark_gray"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:background="@drawable/selector_button_login"
+            android:text="เริ่มต้นใช้งาน"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.JummumCo.Jummum.Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDrop"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="สแกน QR เพื่อโอนเงิน"
+                        android:textColor="@color/ef_white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background ="@color/colorPrimaryDrop">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:id="@+id/main_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_qr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/padding"
+                            android:scaleType="fitCenter" />
+
+                    </LinearLayout>
+
+
+
+                    <Button
+                        android:id="@+id/btn_sheard"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/icon_tab_size"
+                        android:layout_marginRight="@dimen/icon_tab_size"
+                        android:layout_marginTop="@dimen/padding"
+                        android:background="@drawable/selector_button_login"
+                        android:text="แชร์ QR"
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/icon_tab_size"
+                        android:layout_above="@+id/btn_finish"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_finish"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/icon_tab_size"
+                        android:layout_marginBottom="@dimen/icon_tab_size"
+                        android:gravity="center"
+                        android:text="กลับสู่เมนูหลัก"
+                        android:textSize="@dimen/icon_tab_size"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

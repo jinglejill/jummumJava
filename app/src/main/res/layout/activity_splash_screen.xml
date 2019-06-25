@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.JummumCo.Jummum.Activity.SplashScreen">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/jummumlaunchbg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+
+            <ImageView
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/jummumlogo" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:text="@string/welcome"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+
+            <TextView
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Pay for your order, earn and track rewards, check your balance and more, all from your mobile device"
+                android:textSize="@dimen/text_view_size_big" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/pass_btn_login"
+                android:progressBackgroundTint="@color/ef_white"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

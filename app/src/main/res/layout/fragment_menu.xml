@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_search"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="@dimen/padding"
+            android:background="@drawable/selector_edit_text_main"
+            android:hint="@string/search"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <View
+            android:background="?android:attr/listDivider"
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

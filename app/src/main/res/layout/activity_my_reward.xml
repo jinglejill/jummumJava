@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/app_bar_height"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_back"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/mint">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="&lt;"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/back_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:text="@string/myReward"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/padding"
+            android:orientation="vertical">
+
+            <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/btn_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/padding_big"
+                android:elevation="0dp"
+                app:sbg_borderColor="@color/colorPrimary"
+                app:sbg_borderSize="1dp"
+                app:sbg_dividerColor="@color/colorPrimary"
+                app:sbg_dividerPadding="1dp"
+                app:sbg_dividerSize="1dp"
+                app:sbg_position="0"
+                app:sbg_radius="3dp"
+                app:sbg_rippleColor="@color/colorPrimary"
+                app:sbg_selectorColor="@color/colorPrimary"
+                >
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    app:sb_drawableGravity="top"
+                    app:sb_text="ปัจจุบัน"
+                    app:sb_textColor="@color/colorPrimary"
+                    app:sb_textColor_onSelection="@color/ef_white"
+                    />
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    app:sb_drawableGravity="top"
+                    app:sb_text="ใช้ไปแล้ว"
+                    app:sb_textColor="@color/colorPrimary"
+                    app:sb_textColor_onSelection="@color/ef_white" />
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    app:sb_drawableGravity="top"
+                    app:sb_text="หมดอายุ"
+                    app:sb_textColor="@color/colorPrimary"
+                    app:sb_textColor_onSelection="@color/ef_white"/>
+
+            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barSizeTitlebar"
+            android:theme="@style/AppTheme.WithoutActionBar.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_height"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/point_reward"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_view_size_big"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ef_white">
+
+            <EditText
+                android:id="@+id/et_search"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="@dimen/padding"
+                android:background="@drawable/selector_edit_text_search"
+                android:hint="@string/searchReward"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="?android:attr/listDivider"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_space"
+            android:background="@color/ef_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_big"
+                android:paddingTop="@dimen/padding"
+                android:paddingRight="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding">
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/point"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_view_size_larng"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/chefhat_green" />
+
+                    <TextView
+                        android:id="@+id/txt_point"
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding"
+                        android:layout_marginRight="@dimen/padding"
+                        android:textColor="@color/pass_btn_login"
+                        android:textSize="@dimen/text_view_size_larng"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="points"
+                        android:textColor="@color/pass_btn_login"
+                        android:textSize="@dimen/text_view_size_larng"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="?android:attr/listDivider"
+                android:paddingLeft="@dimen/padding_big"
+                android:paddingTop="@dimen/padding"
+                android:paddingRight="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding"></View>
+
+            <LinearLayout
+                android:id="@+id/btn_myreward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_big"
+                android:paddingTop="@dimen/padding"
+                android:paddingRight="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding">
+
+                <TextView
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="รางวัลของฉัน"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_view_size_larng"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <com.JummumCo.Jummum.CustomView.TextAwesome
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/fa_angle_right"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray_black"
+                        android:textSize="@dimen/icon_tab_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_space"
+            android:background="@color/ef_white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

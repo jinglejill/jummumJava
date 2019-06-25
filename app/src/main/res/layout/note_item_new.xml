@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_note"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/btn_minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_remove"
+                    android:layout_centerInParent="true"
+                    android:background="@null"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_count"
+                    style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="1"
+                    android:textColor="@color/dark_gray"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_view_size_larng"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_add"
+                    android:layout_centerInParent="true"
+                    android:background="@null"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_note_quantity"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:visibility="visible">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:visibility="visible"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:text="xxxxx"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_view_size_larng"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:visibility="gone"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:text="+20"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_view_size"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+</LinearLayout>

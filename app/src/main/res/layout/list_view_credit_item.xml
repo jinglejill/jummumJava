@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <ImageView
+            android:id="@+id/image_type"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/txt_num_credit"
+            style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding"
+            android:text="ใส่ห่อ"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/text_view_size_larng" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/padding">
+
+            <TextView
+                android:id="@+id/btn_remove"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_min"
+                android:layout_alignParentRight="true"
+                android:text="ลบ"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_view_size_larng"/>
+
+            <TextView
+                android:id="@+id/icon_check"
+                style="@style/AppTheme.WithoutActionBar.TextViewWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_min"
+                android:layout_alignParentRight="true"
+                android:text="✔"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:textSize="@dimen/text_view_size_larng"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
